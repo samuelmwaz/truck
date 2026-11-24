@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="WhatsApp Image 2026-10-22 at 11.45.14.jpeg">
+    <title>LoadKing Transporters & Logistics | Cargo on Time, Every Time</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            300: '#FCE38A',
+                            400: '#F3D172',
+                            500: '#E5C158',
+                            600: '#D4AF37',
+                            700: '#AA820A',
+                        },
+                        darkBg: '#090B0E',
+                        darkCard: '#12161F',
+                        darkBorder: '#1E2532'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFF 0%, #F3D172 40%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #F3D172 0%, #D4AF37 100%);
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.35);
+        }
+
+        .card-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-overlay-dark {
+            background: linear-gradient(90deg, rgba(9, 11, 14, 0.94) 0%, rgba(9, 11, 14, 0.7) 45%, rgba(9, 11, 14, 0.35) 100%), linear-gradient(180deg, rgba(9,11,14,.2) 0%, rgba(9,11,14,.85) 100%);
+        }
+        .hero-overlay-light {
+            background: linear-gradient(180deg, rgba(243, 244, 246, 0.92) 0%, rgba(243, 244, 246, 0.75) 50%, rgba(243, 244, 246, 1) 100%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ===== Executive bento restyle ===== */
+        body { background-image: radial-gradient(1200px 600px at 85% -10%, rgba(212,175,55,.10), transparent 60%), radial-gradient(900px 500px at -10% 40%, rgba(212,175,55,.05), transparent 60%); background-attachment: fixed; }
+        .panel { position: relative; margin: 1rem auto; width: calc(100% - 1.5rem); max-width: 80rem; border-radius: 1.75rem; border: 1px solid rgba(0,0,0,.08); background: #fff; box-shadow: 0 30px 60px -30px rgba(0,0,0,.25); overflow: hidden; }
+        html.dark .panel { border-color: rgba(212,175,55,.14); background: linear-gradient(180deg, rgba(18,22,31,.92) 0%, rgba(12,15,21,.96) 100%); box-shadow: 0 30px 60px -30px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.04); }
+        .panel::before { content:""; position:absolute; left:8%; right:8%; top:0; height:1px; background:linear-gradient(90deg,transparent,rgba(212,175,55,.55),transparent); }
+        .panel-inner { padding: 3.5rem 1.5rem; }
+        @media (min-width:640px){ .panel-inner { padding: 3.5rem 2.5rem; } }
+        .eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.65rem; letter-spacing:.22em; text-transform:uppercase; font-weight:600; color:#D4AF37; }
+        .eyebrow::before { content:""; width:1.5rem; height:1px; background:#D4AF37; }
+        .link-all { font-size:.75rem; font-weight:600; color:#D4AF37; display:inline-flex; align-items:center; gap:.4rem; transition:gap .25s; }
+        .link-all:hover { gap:.7rem; }
+        .chip { display:flex; align-items:center; gap:.65rem; font-size:.7rem; line-height:1.25; color:#9aa3b2; }
+        .chip i { width:2.25rem; height:2.25rem; flex:none; border-radius:.75rem; display:flex; align-items:center; justify-content:center; border:1px solid rgba(212,175,55,.3); color:#D4AF37; background:rgba(212,175,55,.08); font-size:.85rem; }
+        .chip b { display:block; color:#e5e7eb; font-weight:600; }
+        html:not(.dark) .chip b { color:#111827; }
+        .svc-card { border-radius:1.25rem; overflow:hidden; border:1px solid rgba(212,175,55,.12); }
+        .svc-img { height:9.5rem; width:100%; object-fit:cover; transition:transform .6s; }
+        .svc-card:hover .svc-img { transform:scale(1.06); }
+        .why-item { padding:1.5rem; }
+        @media (min-width:1024px){ .why-item + .why-item { border-left:1px solid rgba(212,175,55,.14); } }
+        .why-icon { width:3.25rem; height:3.25rem; border-radius:9999px; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#F3D172,#D4AF37); color:#0b0d11; font-size:1.1rem; box-shadow:0 0 0 6px rgba(212,175,55,.12), 0 10px 25px -8px rgba(212,175,55,.5); }
+        .hero-frame { position:relative; width:calc(100% - 1.5rem); max-width:84rem; margin:0 auto; border-radius:2rem; overflow:hidden; border:1px solid rgba(212,175,55,.2); box-shadow:0 40px 80px -30px rgba(0,0,0,.9); }
+        .hero-notch { position:absolute; right:0; bottom:0; z-index:20; display:none; align-items:center; gap:.9rem; padding:.9rem 1.4rem .9rem 1.6rem; background:#090B0E; border-top-left-radius:1.5rem; }
+        html:not(.dark) .hero-notch { background:#f3f4f6; }
+        @media (min-width:768px){ .hero-notch { display:flex; } }
+        .hero-notch a { width:2.2rem; height:2.2rem; border-radius:9999px; background:linear-gradient(135deg,#F3D172,#D4AF37); color:#000; display:flex; align-items:center; justify-content:center; font-size:.75rem; }
+        .hero-notch .bar { width:5rem; height:2px; background:rgba(255,255,255,.15); position:relative; }
+        .hero-notch .bar::after { content:""; position:absolute; left:0; top:0; bottom:0; width:40%; background:#D4AF37; }
+        .hero-notch .num { font-family:'Cinzel',serif; font-size:1.25rem; color:#D4AF37; }
+        .quote-mark { font-family:'Cinzel',serif; font-size:4rem; line-height:.7; color:#D4AF37; }
+        #main-header .hdr-bar { border-radius:1.25rem; border:1px solid rgba(212,175,55,.18); box-shadow:0 20px 40px -20px rgba(0,0,0,.7); }
+        html { scroll-padding-top: 6rem; }
+
+        /* ===== Blurred logo appearing / disappearing in the hero background ===== */
+        .logo-bg { position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden; }
+        html:not(.dark) .logo-bg { display:none; }
+        .logo-bg img { position:absolute; width:min(70vw,36rem); height:auto; filter:blur(14px) saturate(1.25); mix-blend-mode:screen; opacity:0; animation:lbfade 9s ease-in-out infinite; will-change:opacity,transform; }
+        .logo-bg .lb1 { left:-8%; top:4%; animation-delay:0s; }
+        .logo-bg .lb2 { left:30%; top:34%; animation-delay:3s; }
+        .logo-bg .lb3 { right:-8%; top:2%; animation-delay:6s; }
+        @keyframes lbfade { 0% { opacity:0; transform:scale(.88) translateY(14px); } 18% { opacity:.46; } 42% { opacity:.46; transform:scale(1.03) translateY(0); } 62%,100% { opacity:0; transform:scale(1.12) translateY(-14px); } }
+        @media (max-width:640px){ .logo-bg img { width:95vw; } @keyframes lbfade { 0% { opacity:0; } 18%,42% { opacity:.3; } 62%,100% { opacity:0; } } }
+        @media (prefers-reduced-motion: reduce) { .logo-bg img { animation:none; opacity:0; } .logo-bg .lb2 { opacity:.28; } }
+
+        /* ===== Big, beautiful logo ===== */
+        @property --ang { syntax:'<angle>'; inherits:false; initial-value:0deg; }
+        @keyframes spinring { to { --ang:360deg; } }
+        @keyframes shine { 0% { transform:translateX(-130%) skewX(-20deg); } 55%,100% { transform:translateX(330%) skewX(-20deg); } }
+        @keyframes glowpulse { 0%,100% { opacity:.55; transform:scale(1); } 50% { opacity:.95; transform:scale(1.06); } }
+        .logo-pop { position:relative; z-index:5; margin-top:-.2rem; margin-bottom:-1.4rem; height:4.4rem; width:auto; border-radius:1.1rem; border:2px solid #D4AF37; background:#000; box-shadow:0 0 0 4px rgba(212,175,55,.18), 0 14px 40px -6px rgba(212,175,55,.75), 0 18px 30px rgba(0,0,0,.55); }
+        @media (min-width:640px){ .logo-pop { height:5.6rem; margin-bottom:-2rem; } }
+        .brand-card { position:relative; isolation:isolate; max-width:35rem; padding:7px; border-radius:2.1rem; background:#000; border:0; box-shadow:0 30px 70px -20px rgba(0,0,0,.9); }
+        .brand-card::before { content:""; position:absolute; inset:-3px; border-radius:calc(2.1rem + 3px); z-index:-1; background:conic-gradient(from var(--ang), #6b4f10, #F3D172, #D4AF37, #7a5a14, #FFF3B0, #D4AF37, #6b4f10); animation:spinring 7s linear infinite; }
+        .brand-card::after { content:""; position:absolute; inset:-34px; z-index:-2; border-radius:3rem; background:radial-gradient(closest-side, rgba(212,175,55,.45), transparent 72%); filter:blur(14px); animation:glowpulse 4s ease-in-out infinite; }
+        .brand-in { background:#000; border-radius:1.75rem; padding:.9rem; }
+        .brand-img { position:relative; overflow:hidden; border-radius:1.2rem; }
+        .brand-img::after { content:""; position:absolute; top:0; bottom:0; width:22%; left:0; background:linear-gradient(100deg, transparent, rgba(255,243,176,.38), transparent); animation:shine 5.5s ease-in-out infinite; pointer-events:none; }
+        .brand-card img { border-radius:0; }
+        .foot-logo { height:8.5rem; width:auto; border-radius:1.4rem; border:2px solid #D4AF37; background:#000; box-shadow:0 0 0 5px rgba(212,175,55,.14), 0 20px 50px -10px rgba(212,175,55,.6); }
+        @media (prefers-reduced-motion: reduce) { .brand-card::before, .brand-card::after, .brand-img::after { animation:none; } }
+
+        /* ===== Logo emphasis + contact ===== */
+        .logo-glow { border:1.5px solid rgba(212,175,55,.75); box-shadow:0 0 0 3px rgba(212,175,55,.12), 0 8px 28px -6px rgba(212,175,55,.6); background:#000; }
+        .brand-card { width:100%; max-width:27rem; padding:1.1rem; border-radius:1.75rem; background:linear-gradient(160deg,#0b0d11,#000); border:1.5px solid rgba(212,175,55,.6); box-shadow:0 0 0 6px rgba(212,175,55,.08), 0 40px 80px -20px rgba(212,175,55,.35); animation:floaty 6s ease-in-out infinite; }
+        .brand-card img { width:100%; height:auto; border-radius:1.1rem; display:block; }
+        .brand-links { display:grid; grid-template-columns:1fr 1fr; gap:.6rem; margin-top:.9rem; }
+        .brand-links a { display:flex; align-items:center; justify-content:center; gap:.5rem; padding:.7rem .5rem; border-radius:.8rem; font-size:.8rem; font-weight:700; color:#fff; border:1px solid rgba(212,175,55,.35); background:rgba(255,255,255,.04); transition:.25s; }
+        .brand-links a:hover { background:#D4AF37; color:#000; }
+        @keyframes floaty { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
+        .wa-float { position:fixed; right:1.1rem; bottom:1.1rem; z-index:45; width:3.5rem; height:3.5rem; border-radius:9999px; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.75rem; box-shadow:0 10px 30px -6px rgba(37,211,102,.7); transition:transform .25s; }
+        .wa-float:hover { transform:scale(1.1); }
+        .wa-float::after { content:""; position:absolute; inset:0; border-radius:9999px; border:2px solid #25D366; animation:pulse2 2s ease-out infinite; }
+        @keyframes pulse2 { from { transform:scale(1); opacity:.7; } to { transform:scale(1.6); opacity:0; } }
+        @media (prefers-reduced-motion: reduce) { .brand-card, .wa-float::after { animation:none; } }
+
+        /* ===== Logo + trucks on pictures ===== */
+        .pic-logo { position:absolute; top:.75rem; right:.75rem; z-index:3; height:3.4rem; width:auto; padding:.15rem; border-radius:.6rem; background:rgba(0,0,0,.55); border:1px solid rgba(212,175,55,.45); backdrop-filter:blur(4px); pointer-events:none; object-fit:contain; }
+        .pic-road { position:absolute; left:0; right:0; bottom:0; height:1.7rem; z-index:2; overflow:hidden; pointer-events:none; background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.65)); }
+        .pic-road::after { content:""; position:absolute; left:0; right:0; bottom:.35rem; height:2px; background:repeating-linear-gradient(90deg, rgba(212,175,55,.6) 0 14px, transparent 14px 30px); animation:roadline 1s linear infinite; }
+        .pic-road i { position:absolute; bottom:.5rem; left:-2rem; font-size:1rem; color:#F3D172; filter:drop-shadow(0 2px 3px rgba(0,0,0,.8)); animation:picdrive 9s linear infinite; }
+        .pic-road i + i { font-size:.75rem; opacity:.65; animation-duration:13s; animation-delay:-6s; }
+        @keyframes picdrive { from { left:-2rem; } to { left:100%; } }
+        @media (prefers-reduced-motion: reduce) { .pic-road i, .pic-road::after { animation:none; } .pic-road i { left:40%; } .pic-road i + i { display:none; } }
+
+        /* ===== Moving trucks (decorative, never touches text) ===== */
+        .road { position:absolute; left:0; right:0; bottom:0; height:3.5rem; overflow:hidden; pointer-events:none; z-index:1; user-select:none; }
+        .road::before { content:""; position:absolute; left:0; right:0; bottom:0; height:2.2rem; background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.55)); }
+        .road::after { content:""; position:absolute; left:0; right:0; bottom:.55rem; height:2px; background:repeating-linear-gradient(90deg, rgba(212,175,55,.55) 0 22px, transparent 22px 46px); animation:roadline 1.2s linear infinite; }
+        .road .truck { position:absolute; bottom:.85rem; left:0; color:#D4AF37; transform:translateX(-120px); will-change:transform; filter:drop-shadow(0 4px 6px rgba(0,0,0,.6)); animation:drive linear infinite; }
+        .road .t1 { font-size:1.9rem; animation-duration:16s; animation-delay:-2s; opacity:.9; }
+        .road .t2 { font-size:1.3rem; animation-duration:22s; animation-delay:-11s; opacity:.55; bottom:1.05rem; }
+        .road .t3 { font-size:1.6rem; animation-duration:19s; animation-delay:-6s; opacity:.75; color:#F3D172; }
+        @keyframes drive { from { transform:translateX(-120px); } to { transform:translateX(calc(100vw + 120px)); } }
+        @keyframes roadline { from { background-position:0 0; } to { background-position:46px 0; } }
+        .road-divider { position:relative; height:3.5rem; width:calc(100% - 1.5rem); max-width:80rem; margin:.25rem auto; border-radius:1rem; overflow:hidden; border:1px solid rgba(212,175,55,.14); background:rgba(0,0,0,.35); }
+        .road-divider .road { height:100%; }
+        @media (prefers-reduced-motion: reduce) { .road .truck, .road::after { animation:none; } .road .t1 { transform:translateX(20vw); } .road .t3 { transform:translateX(60vw); } .road .t2 { display:none; } }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-darkBg text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300 antialiased selection:bg-gold-500 selection:text-black">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-3 left-0 right-0 z-50 transition-all duration-300 px-3 sm:px-6" id="main-header">
+        <div class="max-w-7xl mx-auto bg-white/85 dark:bg-darkBg/80 backdrop-blur-xl hdr-bar px-4 sm:px-6 py-2.5">
+        <div class="flex items-center justify-between">
+            
+            <!-- Official Brand Logo -->
+            <a href="#" class="flex items-center gap-4 group">
+                <img src="images/WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing Logo" class="logo-pop object-contain group-hover:scale-105 transition-transform duration-300">
+                <div class="hidden sm:flex flex-col">
+                    <span class="font-serif font-bold text-xl tracking-wider leading-none text-gray-900 dark:text-white">LOAD<span class="text-gold-500">KING</span></span>
+                    <span class="text-[9px] tracking-widest text-gold-600 dark:text-gold-400 font-semibold uppercase mt-0.5 italic">Cargo on Time, Every Time.</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+                <a href="#about" class="hover:text-gold-500 transition-colors">About</a>
+                <a href="#services" class="hover:text-gold-500 transition-colors">Services</a>
+                <a href="#fleet" class="hover:text-gold-500 transition-colors">Official Fleet</a>
+                <a href="#contact" class="hover:text-gold-500 transition-colors">Contact</a>
+                <a href="loadking_fleet_management.html" class="hover:text-gold-500 transition-colors">Fleet Portal</a>
+            </nav>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-3">
+                
+                <!-- Dark/Light Theme Switcher -->
+                <button id="theme-toggle" class="w-10 h-10 rounded-xl border border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:border-gold-500 hover:text-gold-500 transition-all bg-gray-50 dark:bg-gray-900" title="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden text-lg"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-lg text-gold-400"></i>
+                </button>
+
+
+                <!-- Contact Us Button -->
+                <a href="#contact" class="px-5 py-2.5 rounded-xl gold-gradient-bg text-black font-semibold text-xs sm:text-sm shadow-md hover:shadow-gold-500/20 hover:scale-105 transition-all flex items-center gap-2">
+                    <span>Contact Us</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700 dark:text-gray-200">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-800 flex flex-col gap-3 text-sm font-medium">
+            <a href="#about" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">About Us</a>
+            <a href="#services" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Services</a>
+            <a href="#fleet" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Official Fleet</a>
+            <a href="#contact" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Contact Us</a>
+            <a href="loadking_fleet_management.html" class="px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">Fleet Portal</a>
+            <a data-wa href="#contact" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg border border-gold-500/50 text-gold-500 mt-2">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp Us</span>
+            </a>
+        </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with DAF CF Truck Background -->
+    <section class="pt-28 sm:pt-36 pb-2">
+    <div class="hero-frame min-h-[88vh] pt-14 pb-24 flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <img src="images/WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing DAF Heavy Truck Fleet" class="w-full h-full object-cover object-center scale-105 transform">
+            <div class="absolute inset-0 hero-overlay-dark dark:block hidden"></div>
+            <div class="absolute inset-0 hero-overlay-light dark:hidden block"></div>
+        </div>
+        <div class="logo-bg" aria-hidden="true">
+            <img class="lb1" src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="">
+            <img class="lb2" src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="">
+            <img class="lb3" src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="">
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6 text-left pt-6">
+                
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gold-500/40 bg-gold-500/10 text-gold-500 text-xs font-semibold tracking-wider uppercase backdrop-blur-md">
+                    <i class="fa-solid fa-crown text-xs"></i>
+                    <span>Cargo on Time, Every Time.</span>
+                </div>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none text-gray-900 dark:text-white">
+                    Executive Haulage.<br>
+                    <span class="gold-gradient-text">Cold-Chain Excellence.</span><br>
+                    Precision Logistics.
+                </h1>
+
+                <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl font-light leading-relaxed">
+                    LoadKing Transporters & Logistics delivers premium, temperature-controlled, and heavy-duty freight haulage across regional and nationwide corridors with professionalism and care.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#contact" class="px-7 py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-sm tracking-wide shadow-xl gold-glow hover:scale-105 transition-all flex items-center gap-3">
+                        <span>Contact Us</span>
+                        <i class="fa-solid fa-phone"></i>
+                    </a>
+                    
+                    <a data-wa href="#contact" class="px-7 py-3.5 rounded-xl border border-gray-300 dark:border-gray-700 hover:border-gold-500 bg-white/60 dark:bg-gray-900/60 backdrop-blur-md text-gray-900 dark:text-white font-semibold text-sm tracking-wide transition-all flex items-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-[#25D366] text-lg"></i>
+                        <span>WhatsApp Us</span>
+                    </a>
+                </div>
+
+                <!-- Stats Display -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-200 dark:border-gray-800/80 max-w-xl">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">100%</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-medium mt-1">Thermal Security</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-gold-500">500K+</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-medium mt-1">Loads Transported</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">99.9%</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wider font-medium mt-1">On-Time SLA</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-x-8 gap-y-4 pt-2">
+                    <div class="chip"><i class="fa-solid fa-truck-front"></i><span><b>Own Fleet</b>Modern, serviced rigs</span></div>
+                    <div class="chip"><i class="fa-solid fa-medal"></i><span><b>Proven Experience</b>Trusted corridors</span></div>
+                    <div class="chip"><i class="fa-solid fa-user-tie"></i><span><b>Reliable Drivers</b>Professional &amp; dependable</span></div>
+                </div>
+
+            </div>
+
+            <!-- Brand showcase card -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                <div class="brand-card">
+                  <div class="brand-in">
+                    <div class="brand-img"><img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing — Cargo on Time, Every Time."></div>
+                    <div class="brand-links">
+                        <a data-wa href="#contact"><i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Us</a>
+                        <a data-fb href="#contact"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="road" aria-hidden="true">
+            <i class="fa-solid fa-truck-moving truck t1"></i>
+            <i class="fa-solid fa-truck truck t2"></i>
+            <i class="fa-solid fa-truck-moving truck t3"></i>
+        </div>
+        <div class="hero-notch">
+            <span class="text-[10px] uppercase tracking-[.25em] text-gray-400">Scroll</span>
+            <span class="bar"></span>
+            <a href="#fleet" aria-label="Scroll to fleet"><i class="fa-solid fa-arrow-down"></i></a>
+            <span class="num">01</span>
+        </div>
+    </div>
+    </section>
+
+    <!-- Official LoadKing Fleet Showcase Section -->
+    <section id="fleet" class="panel"><div class="panel-inner">
+        <div class="max-w-3xl mb-10">
+            <span class="eyebrow">Our Fleet in Action</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Official LoadKing Transporters Fleet</h2>
+            <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                Engineered for continuous reliability, temperature-critical logistics, and heavy load capacities.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Fleet Vehicle 1: DAF Heavy Duty Truck -->
+            <div class="rounded-2xl overflow-hidden bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-800 shadow-xl group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="WhatsApp Image 2026-10-22 at 11.53.39 (1).jpeg" alt="LoadKing DAF CF Heavy Truck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                    <span class="absolute top-4 left-4 bg-black/80 text-gold-400 border border-gold-500/30 text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md">HEAVY-DUTY REEFER</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">DAF CF Heavy Transporter</h3>
+                        <span class="text-xs font-mono text-gold-500">Reg: BBE 986</span>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                        High-capacity multi-axle heavy haulier fitted with Carrier Vector cooling systems for long-distance perishable transport.
+                    </p>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 grid grid-cols-2 gap-2 text-xs">
+                        <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-snowflake text-gold-500 mr-1"></i> Active Vector Reefer</span>
+                        <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-weight-hanging text-gold-500 mr-1"></i> Heavy Load Rating</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleet Vehicle 2: Isuzu Light / Medium Reefer -->
+            <div class="rounded-2xl overflow-hidden bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-800 shadow-xl group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="WhatsApp Image 2026-10-22 at 11.53.40.jpeg" alt="LoadKing Isuzu Commercial Truck" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                    <span class="absolute top-4 left-4 bg-black/80 text-gold-400 border border-gold-500/30 text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md">EXPRESS DISTRIBUTION</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Isuzu ELF Express Transporter</h3>
+                        <span class="text-xs font-mono text-gold-500">Reg: NLR85</span>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Agile, temperature-monitored commercial unit optimized for rapid city distribution and last-mile cold deliveries.
+                    </p>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 grid grid-cols-2 gap-2 text-xs">
+                        <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-bolt text-gold-500 mr-1"></i> Rapid Turnaround</span>
+                        <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-route text-gold-500 mr-1"></i> Urban & Regional</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fleet Feature 3: Insulated Clean Cargo Interior -->
+            <div class="rounded-2xl overflow-hidden bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-800 shadow-xl group">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="WhatsApp Image 2026-10-22 at 11.52.52.jpeg" alt="LoadKing Cargo Interior Compartment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                    <span class="absolute top-4 left-4 bg-black/80 text-gold-400 border border-gold-500/30 text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-md">COLD STORAGE INTERIOR</span>
+                </div>
+                <div class="p-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-lg font-bold text-gray-900 dark:text-white">Precision Cargo Bay</h3>
+                        <span class="text-xs font-mono text-gold-500">HACCP CLEAN</span>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                        Stainless steel hygienic flooring, sealed thermal insulation walls, and ceiling-mounted cooling units for pharmaceuticals and fresh produce.
+                    </p>
+                    
+                    <div class="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 grid grid-cols-2 gap-2 text-xs">
+                        <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-temperature-arrow-down text-gold-500 mr-1"></i> Sub-Zero Lock</span>
+                        <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-broom text-gold-500 mr-1"></i> Sanitized Flooring</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div></section>
+
+    <!-- Logistics Services Section -->
+    <section id="services" class="panel"><div class="panel-inner">
+        <div>
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="eyebrow">LoadKing Core Solutions</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-1">Specialized Freight Services</h2>
+                </div>
+                <p class="text-gray-500 dark:text-gray-400 text-sm max-w-md mt-4 md:mt-0">
+                    From deep-freeze pharmaceutical shipments to heavy commercial equipment transport, LoadKing guarantees delivery execution.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="svc-card bg-white dark:bg-darkCard card-hover-effect flex flex-col">
+                    <div class="relative overflow-hidden">
+                        <img src="WhatsApp Image 2026-10-22 at 11.52.52.jpeg" alt="Refrigerated & Cold-Chain" class="svc-img">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-9 left-3 w-10 h-10 rounded-xl gold-gradient-bg text-black flex items-center justify-center shadow-md"><i class="fa-solid fa-snowflake"></i></div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-1">
+                        <div>
+                            <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">Refrigerated & Cold-Chain</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">Temperature-monitored refrigerated transport for meats, pharmaceuticals, produce, and dairy with continuous thermal logging.</p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs text-gold-500 font-semibold">
+                            <span>Read Specifications</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="svc-card bg-white dark:bg-darkCard card-hover-effect flex flex-col">
+                    <div class="relative overflow-hidden">
+                        <img src="WhatsApp Image 2026-10-22 at 11.53.39 (1).jpeg" alt="Heavy Haulage & Inter-City" class="svc-img">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-9 left-3 w-10 h-10 rounded-xl gold-gradient-bg text-black flex items-center justify-center shadow-md"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-1">
+                        <div>
+                            <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">Heavy Haulage & Inter-City</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">Interstate bulk cargo transport using high-capacity prime movers engineered for long endurance and high payload security.</p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs text-gold-500 font-semibold">
+                            <span>Read Specifications</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="svc-card bg-white dark:bg-darkCard card-hover-effect flex flex-col">
+                    <div class="relative overflow-hidden">
+                        <img src="WhatsApp Image 2026-10-22 at 11.53.40.jpeg" alt="Dedicated Fleet Leasing" class="svc-img">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-9 left-3 w-10 h-10 rounded-xl gold-gradient-bg text-black flex items-center justify-center shadow-md"><i class="fa-solid fa-building-shield"></i></div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-1">
+                        <div>
+                            <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">Dedicated Fleet Leasing</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">Customized long-term corporate logistics management, providing enterprise clients with dedicated drivers, vehicles, and dispatch staff.</p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs text-gold-500 font-semibold">
+                            <span>Read Specifications</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="svc-card bg-white dark:bg-darkCard card-hover-effect flex flex-col">
+                    <div class="relative overflow-hidden">
+                        <img src="WhatsApp Image 2026-10-22 at 11.52.52.jpeg" alt="Mobile & Static Storage" class="svc-img">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-9 left-3 w-10 h-10 rounded-xl gold-gradient-bg text-black flex items-center justify-center shadow-md"><i class="fa-solid fa-warehouse"></i></div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-1">
+                        <div>
+                            <h3 class="text-base font-bold text-gray-900 dark:text-white mb-2">Mobile &amp; Static Storage</h3>
+                            <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">Mobile (on-vehicle) and static storage for your goods, including temperature-controlled options. Available on quote.</p>
+                        </div>
+                        <div class="mt-5 pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs text-gold-500 font-semibold">
+                            <span>On quote — contact us</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Company Overview / Brand Crest Section -->
+    <section id="about" class="panel"><div class="panel-inner">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-6 relative">
+                <div class="p-8 rounded-2xl bg-black border border-gold-500/30 text-center shadow-2xl relative overflow-hidden group">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-gold-500/10 rounded-full blur-2xl"></div>
+                    <img src="c:\Users\LENOVO\Downloads\loadking_transporters_logistics (1).html alt="LoadKing Gold Crest Logo" class="w-full max-w-md mx-auto object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500">
+                    <p class="mt-4 text-xs font-serif italic text-gold-400">"Cargo on Time, Every Time."</p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-6">
+                <span class="eyebrow">Why LoadKing Logistics</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight">
+                    Uncompromising Commitment To Delivery Timelines
+                </h2>
+                
+                <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                    At LoadKing Transporters & Logistics, we recognize that timing and cold-chain integrity are paramount to your business growth. Our modern fleet of heavy-duty DAF hauliers and Isuzu express trucks are meticulously maintained to provide flawless transportation.
+                </p>
+
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-gold-500"></i>
+                        <span class="text-sm font-semibold text-gray-900 dark:text-white">Active Carrier Vector Refrigeration Tech</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-gold-500"></i>
+                        <span class="text-sm font-semibold text-gray-900 dark:text-white">Sanitized Stainless Cold Cargo Storage Bays</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-gold-500"></i>
+                        <span class="text-sm font-semibold text-gray-900 dark:text-white">Reliable &amp; Professional Drivers</span>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-xs uppercase tracking-wider shadow-md hover:scale-105 transition-all inline-block">
+                        Schedule Freight Delivery
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div></section>
+
+    <section id="why" class="panel"><div class="panel-inner">
+        <div class="flex items-end justify-between flex-wrap gap-4 mb-8">
+            <div>
+                <span class="eyebrow">The LoadKing Standard</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-2">Why Clients Choose Us</h2>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">We make logistics simple, transparent and dependable.</p>
+            </div>
+            <a href="#contact" class="link-all">Speak to dispatch <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 rounded-2xl border border-gray-200 dark:border-gold-500/10 bg-gray-50 dark:bg-black/20">
+            <div class="why-item"><div class="why-icon mb-4"><i class="fa-solid fa-truck-front"></i></div><h3 class="font-bold text-sm text-gray-900 dark:text-white">Own Fleet</h3><p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">Modern DAF and Isuzu units with regular servicing.</p></div>
+            <div class="why-item"><div class="why-icon mb-4"><i class="fa-solid fa-shield-halved"></i></div><h3 class="font-bold text-sm text-gray-900 dark:text-white">Cargo Insurance</h3><p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">Transit and temperature-protection cover for every load.</p></div>
+            <div class="why-item"><div class="why-icon mb-4"><i class="fa-solid fa-user-tie"></i></div><h3 class="font-bold text-sm text-gray-900 dark:text-white">Reliable &amp; Professional Drivers</h3><p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">Experienced, courteous drivers you can depend on.</p></div>
+            <div class="why-item"><div class="why-icon mb-4"><i class="fa-solid fa-handshake"></i></div><h3 class="font-bold text-sm text-gray-900 dark:text-white">Flexible Terms</h3><p class="text-xs text-gray-500 dark:text-gray-400 mt-1.5 leading-relaxed">Tailored contracts and schedules for each client.</p></div>
+        </div>
+    </div></section>
+
+    <section id="testimonials" class="panel"><div class="panel-inner">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            <div class="lg:col-span-5 flex flex-col justify-between">
+                <div>
+                    <span class="eyebrow">Client Voices</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-2 mb-6">What Our Clients Say</h2>
+                    <div class="quote-mark">&ldquo;</div>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mt-2">We have worked with LoadKing for years. Always on schedule, with cargo arriving at the right temperature. Excellent service and a professional team.</p>
+                </div>
+                <div class="flex items-center gap-3 mt-6">
+                    <div class="w-11 h-11 rounded-full gold-gradient-bg text-black flex items-center justify-center font-bold">C</div>
+                    <div><div class="text-sm font-bold text-gray-900 dark:text-white">Client Name</div><div class="text-[11px] text-gray-500 dark:text-gray-400">Operations Manager, Partner Company</div></div>
+                </div>
+            </div>
+            <div class="lg:col-span-4 rounded-2xl overflow-hidden relative min-h-[16rem]">
+                <img src="WhatsApp Image 2026-10-22 at 11.53.39 (1).jpeg" alt="LoadKing fleet on the road" class="absolute inset-0 w-full h-full object-cover">
+<img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing logo" class="pic-logo"><div class="pic-road" aria-hidden="true"><i class="fa-solid fa-truck-moving"></i><i class="fa-solid fa-truck"></i></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-10 left-4 text-[10px] tracking-widest uppercase text-gold-400 font-semibold">Cargo on Time, Every Time.</span>
+            </div>
+            <div class="lg:col-span-3 rounded-2xl border border-gold-500/20 bg-gradient-to-br from-gold-500/10 to-transparent p-6 flex flex-col justify-between">
+                <div>
+                    <span class="text-xs text-gray-500 dark:text-gray-400">Loads transported</span>
+                    <div class="text-5xl font-extrabold gold-gradient-text mt-1">500K+</div>
+                    <span class="text-sm font-semibold text-gray-900 dark:text-white">and counting</span>
+                </div>
+                <div class="grid grid-cols-2 gap-3 mt-6 text-center">
+                    <div class="rounded-xl border border-gold-500/20 py-3"><div class="text-lg font-extrabold text-gray-900 dark:text-white">99.9%</div><div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400">On-Time</div></div>
+                    <div class="rounded-xl border border-gold-500/20 py-3"><div class="text-lg font-extrabold text-gray-900 dark:text-white">24/7</div><div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-gray-400">Dispatch</div></div>
+                </div>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- Contact & Booking Section -->
+    <section id="contact" class="panel"><div class="panel-inner">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+            <div class="lg:col-span-5 space-y-6">
+                <span class="eyebrow">Connect With Us</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">Contact LoadKing Transport</h2>
+                <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Speak to our executive dispatch team to discuss your transport schedule, cold-chain needs, or long-term cargo contracts. Quotes are prepared personally for every job, including mobile and static storage.
+                </p>
+                <div class="flex items-center gap-3 pt-2">
+                    <span class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Follow us</span>
+                    <div class="flex gap-2 flex-wrap">
+                        <a data-fb href="#contact" class="w-11 h-11 rounded-xl bg-[#1877F2] text-white flex items-center justify-center text-lg hover:scale-110 transition-transform" aria-label="Facebook" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a data-wa href="#contact" class="w-11 h-11 rounded-xl bg-[#25D366] text-white flex items-center justify-center text-lg hover:scale-110 transition-transform" aria-label="WhatsApp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a data-link="linkedin" data-hide-empty href="#contact" class="w-11 h-11 rounded-xl bg-[#0A66C2] text-white flex items-center justify-center text-lg hover:scale-110 transition-transform" aria-label="Linkedin" title="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a data-link="instagram" data-hide-empty href="#contact" class="w-11 h-11 rounded-xl bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white flex items-center justify-center text-lg hover:scale-110 transition-transform" aria-label="Instagram" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a data-link="tiktok" data-hide-empty href="#contact" class="w-11 h-11 rounded-xl bg-black border border-gray-700 text-white flex items-center justify-center text-lg hover:scale-110 transition-transform" aria-label="Tiktok" title="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <a data-wa href="#contact" class="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-800 hover:border-gold-500 shadow-xl transition-all hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#25D366] text-white flex items-center justify-center text-2xl shrink-0"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="min-w-0">
+                            <h4 class="text-[11px] text-gray-500 dark:text-gray-400 uppercase font-semibold tracking-wider">WhatsApp</h4>
+                            <p class="text-sm font-bold text-gray-900 dark:text-white truncate" data-wa-text>+260 970 000000</p>
+                            <span class="text-xs text-gold-500 font-semibold">Chat with us now <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a><a data-call href="#contact" class="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-800 hover:border-gold-500 shadow-xl transition-all hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl gold-gradient-bg !text-black text-white flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-phone"></i></div>
+                        <div class="min-w-0">
+                            <h4 class="text-[11px] text-gray-500 dark:text-gray-400 uppercase font-semibold tracking-wider">Call Dispatch</h4>
+                            <p class="text-sm font-bold text-gray-900 dark:text-white truncate" data-phone>+260 970 000000 / +260 950 000000</p>
+                            <span class="text-xs text-gold-500 font-semibold">Call now <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a><a data-fb href="#contact" class="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-800 hover:border-gold-500 shadow-xl transition-all hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl bg-[#1877F2] text-white flex items-center justify-center text-2xl shrink-0"><i class="fa-brands fa-facebook-f"></i></div>
+                        <div class="min-w-0">
+                            <h4 class="text-[11px] text-gray-500 dark:text-gray-400 uppercase font-semibold tracking-wider">Facebook</h4>
+                            <p class="text-sm font-bold text-gray-900 dark:text-white truncate" >LoadKing Transporters &amp; Logistics</p>
+                            <span class="text-xs text-gold-500 font-semibold">Visit our page <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a><a data-mail href="#contact" class="group flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-darkCard border border-gray-200 dark:border-gray-800 hover:border-gold-500 shadow-xl transition-all hover:-translate-y-1">
+                        <div class="w-14 h-14 rounded-2xl gold-gradient-bg !text-black text-white flex items-center justify-center text-2xl shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="min-w-0">
+                            <h4 class="text-[11px] text-gray-500 dark:text-gray-400 uppercase font-semibold tracking-wider">Official Email</h4>
+                            <p class="text-sm font-bold text-gray-900 dark:text-white truncate" data-email>info@loadkingtransporters.com</p>
+                            <span class="text-xs text-gold-500 font-semibold">Send an email <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div></section>
+
+    <div class="road-divider" aria-hidden="true">
+        <div class="road">
+            <i class="fa-solid fa-truck-moving truck t1"></i>
+            <i class="fa-solid fa-truck truck t3"></i>
+        </div>
+    </div>
+
+    <a data-wa href="#contact" class="wa-float" aria-label="Chat with us on WhatsApp" title="Chat with us on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 border-t border-gray-800 mt-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <img src="WhatsApp Image 2026-10-22 at 11.45.14.jpeg" alt="LoadKing Logo" class="foot-logo">
+                <p class="text-xs text-gray-400 leading-relaxed">
+                    Cargo on Time, Every Time. Premium long-haul transport and temperature-controlled logistics.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Quick Navigation</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#about" class="hover:text-gold-500 transition-colors">About LoadKing</a></li>
+                    <li><a href="#services" class="hover:text-gold-500 transition-colors">Logistics Services</a></li>
+                    <li><a href="#fleet" class="hover:text-gold-500 transition-colors">Official Fleet Gallery</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Standards</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-gold-500 transition-colors">Cold Chain Assurance</a></li>
+                    <li><a href="#" class="hover:text-gold-500 transition-colors">Fleet Safety Policy</a></li>
+                    <li><a href="#" class="hover:text-gold-500 transition-colors">Professional Driver Standards</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-4">Social Presence</h4>
+                <div class="flex gap-3">
+                    <a data-wa href="#contact" class="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500 transition-all">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                    <a data-fb href="#contact" class="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500 transition-all">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a data-link="linkedin" href="#contact" class="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 flex items-center justify-center text-gray-400 hover:text-gold-500 hover:border-gold-500 transition-all">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 mt-12 pt-6 border-t border-gray-900 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500">
+            <span>&copy; 2026 LoadKing Transporters & Logistics. All rights reserved.</span>
+            <span>Cargo on Time, Every Time.</span>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <!-- JavaScript Functions -->
+    <script>
+        // Dark/Light Mode Theme Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // ===== CONTACT SETTINGS — fill these in, everything on the page updates =====
+        const CONFIG = {
+            phone:     '',   // shown + used for "Call", e.g. '+260 97 1234567'
+            whatsapp:  '',   // WhatsApp number, country code first, e.g. '260971234567'
+            email:     '',   // leave empty to keep info@loadkingtransporters.com
+            facebook:  '',   // e.g. 'https://facebook.com/yourpage'
+            linkedin:  '',   // optional — button is hidden until filled in
+            instagram: '',   // optional — button is hidden until filled in
+            tiktok:    ''    // optional — button is hidden until filled in
+        };
+        (function wireContact() {
+            const digits = v => (v || '').replace(/\D/g, '');
+            const open = (a, url) => { a.href = url; a.target = '_blank'; a.rel = 'noopener'; };
+            const wa = digits(CONFIG.whatsapp);
+            document.querySelectorAll('[data-wa]').forEach(a => { if (wa) open(a, 'https://wa.me/' + wa + '?text=' + encodeURIComponent('Hello LoadKing, I would like a quote.')); });
+            document.querySelectorAll('[data-wa-text]').forEach(e => { if (wa) e.textContent = '+' + wa; });
+            document.querySelectorAll('[data-fb]').forEach(a => { if (CONFIG.facebook) open(a, CONFIG.facebook); });
+            document.querySelectorAll('[data-call]').forEach(a => { if (digits(CONFIG.phone)) a.href = 'tel:+' + digits(CONFIG.phone); });
+            document.querySelectorAll('[data-phone]').forEach(e => { if (CONFIG.phone) e.textContent = CONFIG.phone; });
+            const mail = CONFIG.email || 'info@loadkingtransporters.com';
+            document.querySelectorAll('[data-mail]').forEach(a => a.href = 'mailto:' + mail);
+            document.querySelectorAll('[data-email]').forEach(e => e.textContent = mail);
+            document.querySelectorAll('[data-link]').forEach(a => {
+                const url = CONFIG[a.dataset.link];
+                if (url) open(a, url); else if (a.hasAttribute('data-hide-empty')) a.style.display = 'none';
+            });
+        })();
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+    </script>
+</body>
+</html>
